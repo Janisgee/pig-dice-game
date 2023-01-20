@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a2bb2c27f1.js" crossorigin="anonymous"></script>
+    <title>Dice-Pig-Game</title>
+</head>
+
+<body>
+    <div class="game-skin">
+        <div class="container">
+            <div class="two-player">
+                <section class="player player--0">
+                    <div class="dice-turn">🎲</div>
+                    <h2>PLAYER 1</h2>
+                    <p class="score score--0">0</p>
+                    <div class="current-score-box">
+                        <p class="current-label">CURRENT</p>
+                        <p class="currentScore currentScore--0">0</p>
+                    </div>
+                </section>
+                <section class="player player--1">
+                    <div class="dice-turn">🎲</div>
+                    <h2>PLAYER 2</h2>
+                    <p class="score score--1">0</p>
+                    <div class="current-score-box">
+                        <p class="current-label">CURRENT</p>
+                        <p class="currentScore currentScore--1">0</p>
+                    </div>
+                </section>
+            </div>
+            <section class="middle-section">
+                <img src="dice-1.png" class="dice-image" />
+                <button class="btn btn-new">🕹️NEW GAME</button>
+                <!-- //fa-fade -->
+                <button class="btn btn-rollDice">
+            <i class="fa-solid fa-arrows-rotate"></i> ROLL DICE
+          </button>
+                <button class="btn btn-hold">🐖 HOLD</button>
+                <div class="target-score">
+                    <p>SELECT👇TARGET🏆SCORE</p>
+
+                    <div class="winning-score">
+                        <p class="winningScoreNumber">50</p>
+                        <input type="radio" name="winningScore" />
+                        <p class="winningScoreNumber">100</p>
+                        <input type="radio" name="winningScore" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

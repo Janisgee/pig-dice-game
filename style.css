@@ -1,0 +1,146 @@
+* {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background: linear-gradient( to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.container {
+    padding: 5vh 0;
+    background-color: rgba(238, 215, 215, 0.5);
+    border-radius: 12px;
+    height: 45rem;
+    width: 75rem;
+}
+
+.two-player {
+    display: flex;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+    padding: 9rem;
+    transition: all 0.75s ease 0s;
+}
+
+.player .dice-turn {
+    font-size: 60px;
+}
+
+.player h2 {
+    font-size: 50px;
+}
+
+.player .score {
+    font-size: 110px;
+    color: rgb(27, 22, 99);
+}
+
+.player .current-score-box {
+    background-color: rgb(27, 22, 99);
+    text-align: center;
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    margin-top: 5rem;
+}
+
+.player .current-score-box .current-label {
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+
+.player .current-score-box .currentScore {
+    font-size: 50px;
+}
+
+.middle-section {
+    position: relative;
+    bottom: 30rem;
+}
+
+.dice-image {
+    position: relative;
+    left: 32rem;
+    bottom: 12rem;
+    height: 10rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2rem 5rem;
+    border-radius: 15px;
+}
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-weight: 400;
+    box-shadow: 3px 5px 8px gray;
+    background: none rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: background-color 0.5s;
+}
+
+.btn-new {
+    bottom: 30rem;
+    left: 18.5rem;
+}
+
+.btn:hover {
+    background-color: #ebebeb;
+}
+
+.btn:active {
+    transform: scale(98%);
+    box-shadow: 1px 3px 5px gray;
+}
+
+
+/* .fa-beat {
+    display: none;
+} */
+
+.btn-rollDice {
+    left: 4.5rem;
+    bottom: 3rem;
+}
+
+.btn-hold {
+    top: 2rem;
+    right: 8rem;
+}
+
+.target-score {
+    position: relative;
+    left: 29rem;
+    top: 5rem;
+    font-size: 21px;
+    width: fit-content;
+}
+
+.winning-score {
+    display: flex;
+    justify-content: center;
+}
+
+.winningScoreNumber {
+    display: inline;
+    padding: 1rem;
+}
