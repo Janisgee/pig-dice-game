@@ -1,17 +1,21 @@
 "use strict";
 
+const player0El = document.querySelector(".player--0");
+const player1El = document.querySelector(".player--1");
+const score0El = document.querySelector(".score--0");
+const score1El = document.querySelector(".score--1");
+const current0El = document.querySelector(".currentScore--0");
+const current1El = document.querySelector(".currentScore--1");
+
 const btnRollEl = document.querySelector(".btn-rollDice");
 const btnNewEl = document.querySelector(".btn-new");
 const btnHoldEl = document.querySelector(".btn-hold");
 
-const player0El = document.querySelector(".player--0");
-const player1El = document.querySelector(".player--1");
-
-const score0El = document.querySelector(".score--0");
-const score1El = document.querySelector(".score--1");
-
+const diceTurn0El = document.querySelector(".diceTurn--0");
+const diceTurn1El = document.querySelector(".diceTurn--1");
 const diceImageEl = document.querySelector(".dice-image");
 
+// current score back to 0;
 // Starting condition
 
 let activePlayer, playing, currentScore, scores;
@@ -22,22 +26,29 @@ function initalize() {
     currentScore = 0;
     scores = [0, 0];
 
-    document.querySelector(`.currentScore--${activePlayer}`).textContent =
-        currentScore;
-    document.querySelector(`.player--0`).classList.add("player--active");
-    document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove("player--win");
-
-    diceImageEl.classList.add("imageHidden");
     score0El.textContent = 0;
     score1El.textContent = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+    diceTurn1El.classList.remove("fa-shake");
+    player0El.classList.remove("player--win");
+    player1El.classList.remove("player--win");
+    player0El.classList.add("player--active");
+    player1El.classList.remove("player--active");
+
+    document
+        .querySelector(`.diceTurn--${activePlayer}`)
+        .classList.add("fa-shake");
+    diceImageEl.classList.add("imageHidden");
 }
 
 initalize();
 
 function switchPlayer() {
     // current score back to 0;
+    document
+        .querySelector(`.diceTurn--${activePlayer}`)
+        .classList.remove("fa-shake");
     document.querySelector(`.currentScore--${activePlayer}`).textContent = 0;
     currentScore = 0;
     document
@@ -49,6 +60,9 @@ function switchPlayer() {
     document
         .querySelector(`.player--${activePlayer}`)
         .classList.add("player--active");
+    document
+        .querySelector(`.diceTurn--${activePlayer}`)
+        .classList.add("fa-shake");
 }
 
 // When pressed Roll Dice Button
