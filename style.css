@@ -15,7 +15,11 @@ body {
 }
 
 .hidden {
-    display: hidden;
+    display: none;
+}
+
+.imageHidden {
+    opacity: 0;
 }
 
 .container {
