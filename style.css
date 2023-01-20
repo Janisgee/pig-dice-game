@@ -148,3 +148,11 @@ body {
     display: inline;
     padding: 1rem;
 }
+
+.player--active {
+    background-color: rgba(255, 251, 251, 0.5);
+}
+
+.player--win {
+    background-color: rgba(204, 224, 24, 0.8);
+}
