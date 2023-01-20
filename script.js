@@ -4,9 +4,6 @@ const btnRollEl = document.querySelector(".btn-rollDice");
 const btnNewEl = document.querySelector(".btn-new");
 const btnHoldEl = document.querySelector(".btn-hold");
 
-const current0El = document.querySelector(".currentScore--0");
-const current1El = document.querySelector(".currentScore--1");
-
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 
@@ -16,12 +13,28 @@ const score1El = document.querySelector(".score--1");
 const diceImageEl = document.querySelector(".dice-image");
 
 // Starting condition
-diceImageEl.classList.add("imageHidden");
-let playing = true;
 
-let scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
+let activePlayer, playing, currentScore, scores;
+
+function initalize() {
+    activePlayer = 0;
+    playing = true;
+    currentScore = 0;
+    scores = [0, 0];
+
+    document.querySelector(`.currentScore--${activePlayer}`).textContent =
+        currentScore;
+    document.querySelector(`.player--0`).classList.add("player--active");
+    document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove("player--win");
+
+    diceImageEl.classList.add("imageHidden");
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+}
+
+initalize();
 
 function switchPlayer() {
     // current score back to 0;
@@ -86,4 +99,5 @@ btnHoldEl.addEventListener("click", function() {
     }
 });
 
-btnNew.addEventListener;
+// User reset the game
+btnNewEl.addEventListener("click", initalize);
