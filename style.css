@@ -328,7 +328,7 @@ body {
     }
 }
 
-@media (max-width: 326px) {
+@media (max-width: 328px) {
     body {
         height: 106vh;
         align-items: unset;
