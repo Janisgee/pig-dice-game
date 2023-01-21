@@ -11,6 +11,9 @@ const btnRollEl = document.querySelector(".btn-rollDice");
 const btnNewEl = document.querySelector(".btn-new");
 const btnHoldEl = document.querySelector(".btn-hold");
 
+const targetScore50 = document.querySelector(`input[value="50"]`);
+const targetScore100 = document.querySelector(`input[value="100"]`);
+
 const diceTurn0El = document.querySelector(".diceTurn--0");
 const diceTurn1El = document.querySelector(".diceTurn--1");
 const diceImageEl = document.querySelector(".dice-image");
@@ -18,13 +21,14 @@ const diceImageEl = document.querySelector(".dice-image");
 // current score back to 0;
 // Starting condition
 
-let activePlayer, playing, currentScore, scores;
+let activePlayer, playing, currentScore, scores, targetScore;
 
 function initalize() {
     activePlayer = 0;
     playing = true;
     currentScore = 0;
     scores = [0, 0];
+    targetScore = 50;
 
     score0El.textContent = 0;
     score1El.textContent = 0;
@@ -35,6 +39,8 @@ function initalize() {
     player1El.classList.remove("player--win");
     player0El.classList.add("player--active");
     player1El.classList.remove("player--active");
+    targetScore50.disabled = false;
+    targetScore100.disabled = false;
 
     document
         .querySelector(`.diceTurn--${activePlayer}`)
@@ -67,6 +73,8 @@ function switchPlayer() {
 
 // When pressed Roll Dice Button
 btnRollEl.addEventListener("click", function() {
+    targetScore50.disabled = true;
+    targetScore100.disabled = true;
     if (playing) {
         diceImageEl.classList.remove("imageHidden");
         //Generate random dice roll
@@ -96,7 +104,7 @@ btnHoldEl.addEventListener("click", function() {
 
         console.log(scores);
         // check if score more than 100
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= targetScore) {
             //if yes, current player wins!
             playing = false;
 
@@ -115,3 +123,10 @@ btnHoldEl.addEventListener("click", function() {
 
 // User reset the game
 btnNewEl.addEventListener("click", initalize);
+
+targetScore50.addEventListener("change", function(e) {
+    targetScore = 50;
+});
+targetScore100.addEventListener("change", function(e) {
+    targetScore = 100;
+});

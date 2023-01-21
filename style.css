@@ -330,7 +330,7 @@ body {
 
 @media (max-width: 416px) {
     body {
-        height: 106vh;
+        height: 100vh;
         align-items: unset;
         padding-top: 4rem;
     }
@@ -352,7 +352,7 @@ body {
     }
     .target-score {
         left: 8.4rem;
-        top: 9rem;
+        top: 8rem;
         font-size: 18px;
     }
     .dice-image {
@@ -362,14 +362,14 @@ body {
     }
     .btn-rollDice {
         left: 6.5rem;
-        bottom: 6.5rem;
+        bottom: 7.5rem;
     }
     .btn-hold {
-        top: -5.8rem;
+        top: -6.8rem;
         right: -13.2rem;
     }
     .btn-new {
-        bottom: 22.5rem;
+        bottom: 23rem;
         left: 10.2rem;
     }
     .winningScoreNumber {
