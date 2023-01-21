@@ -269,3 +269,61 @@ body {
         padding: 1rem 1rem 0 1rem;
     }
 }
+
+@media (max-width: 576px) {
+    .container {
+        height: 42.4rem;
+        width: 21rem;
+    }
+    .target-score {
+        left: 9.7rem;
+        top: 10rem;
+        padding: 0.2rem;
+        font-size: 19px;
+    }
+    .player {
+        flex-direction: unset;
+    }
+    .player--0 {
+        flex-direction: column;
+        padding: 0 0 4.5rem 0;
+    }
+    .player--1 {
+        flex-direction: column-reverse;
+        padding: 4.5rem 0 0 0;
+    }
+    .player .dice-turn {
+        font-size: 33px;
+    }
+    .player .score {
+        font-size: 56px;
+    }
+    .player .current-score-box {
+        margin: 0;
+    }
+    .player .current-score-box .currentScore {
+        font-size: 40px;
+    }
+    .player .current-score-box .current-label {
+        margin-bottom: 0rem;
+    }
+    .btn-rollDice {
+        left: 8rem;
+        bottom: 8.5rem;
+        width: 3rem;
+    }
+    .btn-hold {
+        top: -7.5rem;
+        right: -15.5rem;
+        width: 3rem;
+    }
+    .dice-image {
+        left: 14.8rem;
+        bottom: 1.5rem;
+        height: 6.5rem;
+    }
+    .btn-new {
+        bottom: 27.5rem;
+        left: 5.7rem;
+    }
+}
