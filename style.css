@@ -336,5 +336,43 @@ body {
     }
     .container {
         width: 17rem;
+        height: 36.5rem;
+    }
+    .player h2 {
+        font-size: 30px;
+    }
+    .player--0 {
+        padding: 0 0 2.5rem 0;
+    }
+    .player--1 {
+        padding: 2.5rem 0 0 0;
+    }
+    .player .dice-turn {
+        font-size: 29px;
+    }
+    .target-score {
+        left: 8.4rem;
+        top: 9rem;
+        font-size: 18px;
+    }
+    .dice-image {
+        left: 13.3rem;
+        bottom: -2rem;
+        height: 5.5rem;
+    }
+    .btn-rollDice {
+        left: 6.5rem;
+        bottom: 6.5rem;
+    }
+    .btn-hold {
+        top: -5.8rem;
+        right: -13.2rem;
+    }
+    .btn-new {
+        bottom: 22.5rem;
+        left: 10.2rem;
+    }
+    .winningScoreNumber {
+        padding: 0rem 1rem 0 1rem;
     }
 }
