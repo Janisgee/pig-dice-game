@@ -100,7 +100,7 @@ body {
 
 .btn-new {
     bottom: 30rem;
-    left: 18.5rem;
+    left: 10.5rem;
 }
 
 .btn:hover {
@@ -117,14 +117,19 @@ body {
     display: none;
 } */
 
+.btn-rule {
+    bottom: 30rem;
+    left: 14.5rem;
+}
+
 .btn-rollDice {
-    left: 4.5rem;
+    left: -6rem;
     bottom: 3rem;
 }
 
 .btn-hold {
     top: 2rem;
-    right: 8rem;
+    right: 18.5rem;
 }
 
 .target-score {
@@ -174,6 +179,13 @@ body {
     .player .current-score-box {
         padding: 1rem 3rem;
     }
+    .btn-hold {
+        top: -1rem;
+        right: -31.5rem;
+    }
+    .target-score {
+        top: 1rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -193,7 +205,7 @@ body {
     .target-score {
         font-size: 20px;
         left: 21.5rem;
-        top: 9.5rem;
+        top: 6.5rem;
     }
     .dice-image {
         left: 26rem;
@@ -201,12 +213,18 @@ body {
         bottom: 5rem;
     }
     .btn-hold {
-        top: 3rem;
-        right: 7.5rem;
+        top: 0rem;
+        right: -25.5rem;
     }
     .btn-rollDice {
-        left: 3rem;
+        left: -5.5rem;
         bottom: 1rem;
+    }
+    .btn-new {
+        left: 7.5rem;
+    }
+    .btn-rule {
+        left: 11.5rem;
     }
 }
 
@@ -245,21 +263,25 @@ body {
     .btn {
         font-size: 1.3rem;
     }
+    .btn-rule {
+        left: 7rem;
+        bottom: 25rem;
+    }
     .btn-rollDice {
-        left: -11rem;
-        bottom: 5rem;
+        left: 8rem;
+        bottom: 6rem;
     }
     .btn-hold {
-        top: -4rem;
-        right: -9.5rem;
+        top: -6rem;
+        right: -17.5rem;
     }
     .btn-new {
-        bottom: 3rem;
-        left: 20rem;
+        bottom: 25rem;
+        left: 3rem;
     }
     .target-score {
         left: 13.5rem;
-        top: -32rem;
+        top: 13rem;
         background-color: rgb(255, 255, 255, 0.9);
         padding: 1rem 2rem;
         border-radius: 12px;
@@ -307,14 +329,18 @@ body {
     .player .current-score-box .current-label {
         margin-bottom: 0rem;
     }
+    .btn-rule {
+        left: 20rem;
+        bottom: 30.2rem;
+    }
     .btn-rollDice {
-        left: 8rem;
+        left: 0rem;
         bottom: 8.5rem;
         width: 3rem;
     }
     .btn-hold {
         top: -7.5rem;
-        right: -15.5rem;
+        right: -7.2rem;
         width: 3rem;
     }
     .dice-image {
@@ -324,7 +350,7 @@ body {
     }
     .btn-new {
         bottom: 27.5rem;
-        left: 5.7rem;
+        left: 0.7rem;
     }
 }
 
@@ -336,7 +362,7 @@ body {
     }
     .container {
         width: 17rem;
-        height: 36.7rem;
+        height: 36.8rem;
     }
     .player h2 {
         font-size: 30px;
@@ -352,7 +378,7 @@ body {
     }
     .target-score {
         left: 8.4rem;
-        top: 8rem;
+        top: 4rem;
         font-size: 18px;
     }
     .dice-image {
@@ -361,16 +387,20 @@ body {
         height: 5.5rem;
     }
     .btn-rollDice {
-        left: 6.5rem;
+        left: -2.5rem;
         bottom: 7.5rem;
     }
     .btn-hold {
-        top: -6.8rem;
-        right: -13.2rem;
+        top: -12.8rem;
+        right: -20.2rem;
+    }
+    .btn-rule {
+        left: 18.5rem;
+        bottom: 25.6rem;
     }
     .btn-new {
-        bottom: 23rem;
-        left: 10.2rem;
+        bottom: 22.7rem;
+        left: 6rem;
     }
     .winningScoreNumber {
         padding: 0rem 1rem 0 1rem;
