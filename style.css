@@ -327,3 +327,14 @@ body {
         left: 5.7rem;
     }
 }
+
+@media (max-width: 326px) {
+    body {
+        height: 106vh;
+        align-items: unset;
+        padding-top: 4rem;
+    }
+    .container {
+        width: 17rem;
+    }
+}
