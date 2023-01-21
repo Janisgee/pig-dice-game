@@ -10,6 +10,7 @@ const current1El = document.querySelector(".currentScore--1");
 const btnRollEl = document.querySelector(".btn-rollDice");
 const btnNewEl = document.querySelector(".btn-new");
 const btnHoldEl = document.querySelector(".btn-hold");
+const btnRulesEl = document.querySelector(".btn-rules");
 
 const targetScore50 = document.querySelector(`input[value="50"]`);
 const targetScore100 = document.querySelector(`input[value="100"]`);
@@ -17,6 +18,11 @@ const targetScore100 = document.querySelector(`input[value="100"]`);
 const diceTurn0El = document.querySelector(".diceTurn--0");
 const diceTurn1El = document.querySelector(".diceTurn--1");
 const diceImageEl = document.querySelector(".dice-image");
+
+// modal layer
+const modalEl = document.querySelector(".modal");
+const overlayEl = document.querySelector(".overlay");
+const btnCloseModalEl = document.querySelector(".btn-close-modal");
 
 // current score back to 0;
 // Starting condition
@@ -120,7 +126,6 @@ btnHoldEl.addEventListener("click", function() {
         }
     }
 });
-
 // User reset the game
 btnNewEl.addEventListener("click", initalize);
 
@@ -130,3 +135,38 @@ targetScore50.addEventListener("change", function(e) {
 targetScore100.addEventListener("change", function(e) {
     targetScore = 100;
 });
+
+// User click the rules
+const openModal = function() {
+    modalEl.classList.remove("hidden");
+    overlayEl.classList.remove("hidden");
+};
+
+const closeModal = function() {
+    modalEl.classList.add("hidden");
+    overlayEl.classList.add("hidden");
+};
+
+btnRulesEl.addEventListener("click", openModal);
+
+btnCloseModalEl.addEventListener("click", closeModal);
+btnCloseModalEl.addEventListener("touchend", closeModal);
+
+overlayEl.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function(e) {
+    console.log(e);
+    if (e.key === "Escape" && !modalEl.classList.contains("hidden")) {
+        closeModal();
+    }
+});
+
+overlayEl.addEventListener("mouseup", tapOrClick, false);
+overlayEl.addEventListener("touchend", tapOrClick, false);
+
+function tapOrClick(event) {
+    console.log(event);
+    closeModal();
+    event.preventDefault();
+    return false;
+}

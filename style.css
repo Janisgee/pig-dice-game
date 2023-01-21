@@ -96,6 +96,7 @@ body {
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     transition: background-color 0.5s;
+    touch-action: manipulation;
 }
 
 .btn-new {
@@ -117,7 +118,7 @@ body {
     display: none;
 } */
 
-.btn-rule {
+.btn-rules {
     bottom: 30rem;
     left: 14.5rem;
 }
@@ -162,6 +163,56 @@ body {
 
 .diceShow {
     opacity: 100;
+}
+
+
+/* Classes to make modal work */
+
+.btn-close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    background-color: transparent;
+    border: none;
+    touch-action: manipulation;
+}
+
+.btn-close-modal:hover {
+    transform: scale(85%);
+    cursor: pointer;
+}
+
+.btn-close-modal:active {
+    transform: scale(50%);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    font-size: 2rem;
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
 }
 
 @media (max-width: 1200px) {
@@ -223,8 +274,11 @@ body {
     .btn-new {
         left: 7.5rem;
     }
-    .btn-rule {
+    .btn-rules {
         left: 11.5rem;
+    }
+    .modal {
+        font-size: 1.6rem;
     }
 }
 
@@ -263,7 +317,7 @@ body {
     .btn {
         font-size: 1.3rem;
     }
-    .btn-rule {
+    .btn-rules {
         left: 7rem;
         bottom: 25rem;
     }
@@ -289,6 +343,9 @@ body {
     }
     .winningScoreNumber {
         padding: 1rem 1rem 0 1rem;
+    }
+    .modal {
+        font-size: 1.3rem;
     }
 }
 
@@ -329,18 +386,18 @@ body {
     .player .current-score-box .current-label {
         margin-bottom: 0rem;
     }
-    .btn-rule {
+    .btn-rules {
         left: 20rem;
         bottom: 30.2rem;
     }
     .btn-rollDice {
-        left: 0rem;
+        left: -0.5rem;
         bottom: 8.5rem;
         width: 3rem;
     }
     .btn-hold {
-        top: -7.5rem;
-        right: -7.2rem;
+        top: -13.5rem;
+        right: -21.8rem;
         width: 3rem;
     }
     .dice-image {
@@ -351,6 +408,11 @@ body {
     .btn-new {
         bottom: 27.5rem;
         left: 0.7rem;
+    }
+    .modal {
+        padding: 2rem;
+        top: 48%;
+        line-height: 1.2rem;
     }
 }
 
@@ -394,7 +456,7 @@ body {
         top: -12.8rem;
         right: -20.2rem;
     }
-    .btn-rule {
+    .btn-rules {
         left: 18.5rem;
         bottom: 25.6rem;
     }

@@ -39,7 +39,7 @@
             <section class="middle-section">
                 <img src="dice-1.png" class="dice-image" />
                 <button class="btn btn-new">🕹️NEW GAME</button>
-                <button class="btn btn-rule">📜RULE</button>
+                <button class="btn btn-rules">📜RULES</button>
                 <button class="btn btn-rollDice">
             <i class="fa-solid fa-arrows-rotate"></i> ROLL DICE
           </button>
@@ -55,6 +55,20 @@
                     </div>
                 </div>
             </section>
+            <div class="modal hidden">
+                <button class="btn-close-modal fa-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+                <h3>📜Rules📜</h3>
+                <br />
+                <p>
+                    Each turn🎮, a player repeatedly rolls a dice🎲 until either a 1 is rolled or the player decides to "hold":<br /><br /> 👉If the player rolls🔄️ a 1, they score nothing and it becomes the next player's turn.<br /><br /> 👉If the player
+                    rolls🔄️ any other number, it is added to their turn total and the player's turn continues. <br />
+                    <br /> 👉If a player chooses to "hold🐖", their turn total is added to their score, and it becomes the next player's turn. <br />
+                    <br /> 🤩The first player to meet target score (50 / 100) or more points wins🏆.
+                </p>
+            </div>
+            <div class="overlay hidden"></div>
         </div>
     </div>
     <script src="script.js"></script>
