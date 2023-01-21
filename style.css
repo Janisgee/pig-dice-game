@@ -328,7 +328,7 @@ body {
     }
 }
 
-@media (max-width: 328px) {
+@media (max-width: 416px) {
     body {
         height: 106vh;
         align-items: unset;
@@ -336,7 +336,7 @@ body {
     }
     .container {
         width: 17rem;
-        height: 36.5rem;
+        height: 36.7rem;
     }
     .player h2 {
         font-size: 30px;
