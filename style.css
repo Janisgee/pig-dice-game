@@ -158,3 +158,114 @@ body {
 .diceShow {
     opacity: 100;
 }
+
+@media (max-width: 1200px) {
+    .container {
+        height: 40rem;
+        width: 60rem;
+    }
+    .player {
+        padding: 4rem;
+    }
+    .middle-section {
+        bottom: 23rem;
+        right: 7.5rem;
+    }
+    .player .current-score-box {
+        padding: 1rem 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        height: 41.7rem;
+        width: 45rem;
+    }
+    .player {
+        padding: 5rem;
+    }
+    .player h2 {
+        font-size: 45px;
+    }
+    .btn {
+        font-size: 1.4rem;
+    }
+    .target-score {
+        font-size: 20px;
+        left: 21.5rem;
+        top: 9.5rem;
+    }
+    .dice-image {
+        left: 26rem;
+        height: 8rem;
+        bottom: 5rem;
+    }
+    .btn-hold {
+        top: 3rem;
+        right: 7.5rem;
+    }
+    .btn-rollDice {
+        left: 3rem;
+        bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 38.9rem;
+        width: 32rem;
+    }
+    .player h2 {
+        text-align: center;
+        font-size: 37px;
+    }
+    .player .current-score-box {
+        margin: 3rem 0.5rem;
+        padding: 1rem 1rem;
+    }
+    .player .score {
+        font-size: 105px;
+        margin: 0 1rem;
+    }
+    .two-player {
+        display: unset;
+    }
+    .player .dice-turn {
+        font-size: 55px;
+    }
+    .player {
+        flex-direction: unset;
+        padding: 2rem;
+    }
+    .dice-image {
+        left: 20rem;
+        bottom: 0rem;
+        height: 7rem;
+    }
+    .btn {
+        font-size: 1.3rem;
+    }
+    .btn-rollDice {
+        left: -11rem;
+        bottom: 5rem;
+    }
+    .btn-hold {
+        top: -4rem;
+        right: -9.5rem;
+    }
+    .btn-new {
+        bottom: 3rem;
+        left: 20rem;
+    }
+    .target-score {
+        left: 13.5rem;
+        top: -32rem;
+        background-color: rgb(255, 255, 255, 0.9);
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 3px 5px 8px grey;
+    }
+    .winningScoreNumber {
+        padding: 1rem 1rem 0 1rem;
+    }
+}
