@@ -192,6 +192,7 @@ body {
     background-color: transparent;
     border: none;
     touch-action: manipulation;
+    z-index: 11;
 }
 
 .btn-close-modal:hover {
@@ -528,7 +529,7 @@ body {
         bottom: 15.9rem;
     }
     .btn-new {
-        bottom: 13.5rem;
+        bottom: 13.2rem;
         left: 2rem;
     }
     .winningScoreNumber {
@@ -537,5 +538,13 @@ body {
     .footer {
         width: 18rem;
         margin: 0.5rem auto 1rem;
+    }
+    .modal {
+        line-height: 1.3rem;
+        font-size: 1.1rem;
+        padding: 2rem 1.1rem;
+    }
+    .overlay {
+        height: 110%;
     }
 }
